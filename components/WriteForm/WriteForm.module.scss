@@ -1,0 +1,9 @@
+input {
+    font-size: 28px !important
+}
+
+.titleField {
+    &:before, &:after {
+        display: none !important
+    }
+}

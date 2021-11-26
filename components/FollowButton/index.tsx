@@ -1,7 +1,7 @@
 import React from 'react'
-import { Button } from '@material-ui/core'
-import CheckIcon from '@material-ui/icons/CheckOutlined'
-import AddIcon from '@material-ui/icons/AddOutlined'
+import { Button } from '@mui/material'
+import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined'
+import AddOutlinedIcon from '@mui/icons-material/AddOutlined'
 
 import styles from './FollowButton.module.scss'
 
@@ -13,7 +13,11 @@ export const FollowButton: React.FC = () => {
       onClick={() => setFollowed(!followed)}
       variant="contained"
       style={{ minWidth: 30, width: 35, height: 30 }}>
-      {!followed ? <AddIcon /> : <CheckIcon style={{ fontSize: 20, color: '#2ea83a' }} />}
+      {!followed ? (
+        <AddOutlinedIcon />
+      ) : (
+        <CheckOutlinedIcon style={{ fontSize: 20, color: '#2ea83a' }} />
+      )}
     </Button>
   )
 }

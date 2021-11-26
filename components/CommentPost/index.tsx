@@ -1,6 +1,6 @@
 import React from 'react'
-import { IconButton, Menu, MenuItem, Paper, Typography } from '@material-ui/core'
-import MoreVertIcon from '@material-ui/icons/MoreVert'
+import { IconButton, Menu, MenuItem, Paper, Typography } from '@mui/material'
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 import styles from './CommentPost.module.scss'
 

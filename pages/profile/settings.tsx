@@ -1,4 +1,4 @@
-import { Button, Divider, Paper, TextField, Typography } from '@material-ui/core'
+import { Button, Divider, Paper, TextField, Typography } from '@mui/material'
 import { MainLayout } from '../../layouts/MainLayout'
 
 export default function Settings() {

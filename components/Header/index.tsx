@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { Paper, Button, IconButton, Avatar } from '@material-ui/core'
+import { Paper, Button, IconButton, Avatar } from '@mui/material'
 import {
   SearchOutlined as SearchIcon,
   CreateOutlined as PenIcon,
@@ -8,7 +8,7 @@ import {
   Menu as MenuIcon,
   ExpandMoreOutlined as ArrowBottom,
   NotificationsNoneOutlined as NotificationIcon,
-} from '@material-ui/icons'
+} from '@mui/icons-material'
 
 import styles from './Header.module.scss'
 

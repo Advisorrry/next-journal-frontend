@@ -1,5 +1,5 @@
 import React from 'react'
-import ArrowRightIcon from '@material-ui/icons/NavigateNextOutlined'
+import ArrowRightIcon from '@mui/icons-material/NavigateNextOutlined'
 import Image from 'next/image'
 
 import styles from './SideComments.module.scss'

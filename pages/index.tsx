@@ -1,9 +1,9 @@
-import Head from 'next/head';
+import Head from 'next/head'
 
-import { Header } from '../components/Header';
-import { LeftMenu } from '../components/LeftMenu';
-import { Post } from '../components/Post';
-import { SideComments } from '../components/SideComments';
+import { Header } from '../components/Header'
+import { LeftMenu } from '../components/LeftMenu'
+import { Post } from '../components/Post'
+import { SideComments } from '../components/SideComments'
 
 export default function Home() {
   return (
@@ -11,7 +11,6 @@ export default function Home() {
       <Head>
         <title>RJournal</title>
         <link rel="icon" href="/favicon.ico" />
-        
       </Head>
       <Header />
       <div className="wrapper">
@@ -31,5 +30,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  );
+  )
 }

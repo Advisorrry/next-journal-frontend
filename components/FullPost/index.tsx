@@ -10,7 +10,7 @@ import styles from './FullPost.module.scss'
 export const FullPost: React.FC = () => {
   return (
     <Paper elevation={0} className={styles.paper}>
-      <div style={{ margin: '0 auto', width: 680 }}>
+      <div className="container">
         <Typography variant="h4" className={styles.title}>
           Superjet, летящий из Волгограда в Москву, подал сигнал бедствия. Возможно, в полете
           произошла разгерметизация
@@ -37,10 +37,14 @@ export const FullPost: React.FC = () => {
           </div>
           <div className="d-flex justify-between align-center mt-30 mb-30">
             <div className={styles.userInfo}>
-              <Image
-                src="https://leonardo.osnova.io/104b03b4-5173-fd9f-2af9-b458dddc4a23/-/scale_crop/108x108/-/format/webp/"
-                alt="Avatar"
-              />
+              <div className={styles.img}>
+                <Image
+                  src="https://leonardo.osnova.io/104b03b4-5173-fd9f-2af9-b458dddc4a23/-/scale_crop/108x108/-/format/webp/"
+                  alt="Avatar"
+                  width="80px"
+                  height="80px"
+                />
+              </div>
               <b>Donnie Darko</b>
               <span>+1685</span>
             </div>

@@ -15,7 +15,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
   contentFullWidth,
   hideComments,
   className,
-  hideMenu
+  hideMenu,
 }) => {
   return (
     <div className={clsx('wrapper', className)}>

@@ -8,13 +8,13 @@ import {
   Typography,
   Tabs,
   Tab,
-} from '@material-ui/core'
+} from '@mui/material'
 
 import { MainLayout } from '../layouts/MainLayout'
 import { FollowButton } from '../components/FollowButton'
 import { NextPage } from 'next'
 
-export default function Rating () {
+const Rating: NextPage = () => {
   return (
     <MainLayout>
       <Paper className="pl-20 pt-20 pr-20 mb-20" elevation={0}>
@@ -57,3 +57,5 @@ export default function Rating () {
     </MainLayout>
   )
 }
+
+export default Rating

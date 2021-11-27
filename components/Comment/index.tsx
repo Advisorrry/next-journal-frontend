@@ -1,9 +1,9 @@
 import React from 'react'
-import { Typography, IconButton, MenuItem, Menu } from '@material-ui/core'
-import MoreIcon from '@material-ui/icons/MoreHorizOutlined'
 import Image from 'next/image'
 
 import styles from './Comment.module.scss'
+import { Typography, IconButton, Menu, MenuItem } from '@mui/material'
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
 interface CommentPostProps {
   user: {
@@ -40,7 +40,7 @@ export const Comment: React.FC<CommentPostProps> = ({ user, text }) => {
       </Typography>
       <span className={styles.replyBtn}>Ответить</span>
       <IconButton onClick={handleClick}>
-        <MoreIcon />
+        <MoreHorizIcon />
       </IconButton>
       <Menu
         anchorEl={anchorEl}

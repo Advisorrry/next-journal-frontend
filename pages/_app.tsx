@@ -1,4 +1,5 @@
-import { MuiThemeProvider, CssBaseline } from '@material-ui/core'
+import { CssBaseline } from '@mui/material'
+import { ThemeProvider } from '@mui/material/styles'
 import { theme } from '../theme'
 import { AppProps } from 'next/app'
 
@@ -8,12 +9,11 @@ import { Header } from '../components/Header'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <MuiThemeProvider theme={theme}>
-        <CssBaseline />
-        <Header />
-        <Component {...pageProps} />
-      </MuiThemeProvider>
-
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Header />
+      <Component {...pageProps} />
+    </ThemeProvider>
   )
 }
 

@@ -1,9 +1,19 @@
-input {
-    font-size: 28px !important
+.titleField {
+  width: 100%;
+  margin-bottom: 10px;
+
+  &:before,
+  &:after {
+    display: none !important;
+  }
+
+  input {
+    font-size: 28px !important;
+    font-weight: 600 !important;
+  }
 }
 
-.titleField {
-    &:before, &:after {
-        display: none !important
-    }
+.editor {
+  font-size: 18px;
+  height: calc(100vh - 200px);
 }

@@ -1,8 +1,8 @@
-import { Button, Paper, Typography } from '@material-ui/core'
+import { Button, Paper, Typography } from '@mui/material'
 import React from 'react'
 import { PostActions } from '../PostActions'
-import MessageIcon from '@material-ui/icons/TextsmsOutlined'
-import UserAddIcon from '@material-ui/icons/PersonAddOutlined'
+import MessageIcon from '@mui/icons-material/TextsmsOutlined'
+import UserAddIcon from '@mui/icons-material/PersonAddOutlined'
 import Image from 'next/image'
 
 import styles from './FullPost.module.scss'

@@ -1,18 +1,20 @@
 import React from 'react'
 import Image from 'next/image'
-
+import { formatRelative, subDays } from 'date-fns'
 import styles from './Comment.module.scss'
-import { Typography, IconButton, Menu, MenuItem } from '@mui/material'
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import { Typography, IconButton, Menu, MenuItem, Paper } from '@mui/material'
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz'
 
 interface CommentPostProps {
+  text: string
   user: {
     fullname: string
+    avatarUrl: string
   }
-  text: string
+  createdAt: Date | number
 }
 
-export const Comment: React.FC<CommentPostProps> = ({ user, text }) => {
+export const Comment: React.FC<CommentPostProps> = ({ user, text, createdAt }) => {
   const [anchorEl, setAnchorEl] = React.useState(null)
 
   const handleClick = (event: any) => {
@@ -27,17 +29,13 @@ export const Comment: React.FC<CommentPostProps> = ({ user, text }) => {
   return (
     <div className={styles.comment}>
       <div className={styles.userInfo}>
-        <Image
-          src="https://leonardo.osnova.io/104b03b4-5173-fd9f-2af9-b458dddc4a23/-/scale_crop/108x108/-/format/webp/"
-          alt="Avatar"
-        />
-        <b>Master Oogway</b>
-        <span>5 часов</span>
+        <div className={styles.img}>
+          <Image src={user.avatarUrl} alt="Avatar" width="84px" height="84px" />
+        </div>
+        <b>{user.fullname}</b>
+        <span>{formatRelative(subDays(createdAt, 3), new Date())}</span>
       </div>
-      <Typography className={styles.text}>
-        Суперджет это ад адский, два раза летала и оба раза прощалась с жизнью. Трясёт хуже, чем в
-        копейке по разьебанной дороге
-      </Typography>
+      <Typography className={styles.text}>{text}</Typography>
       <span className={styles.replyBtn}>Ответить</span>
       <IconButton onClick={handleClick}>
         <MoreHorizIcon />

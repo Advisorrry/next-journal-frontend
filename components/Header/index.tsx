@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { AuthForm } from '../AuthForm'
 import { Paper, Button, IconButton, Avatar } from '@mui/material'
 import {
   SearchOutlined as SearchIcon,
@@ -13,6 +14,16 @@ import {
 import styles from './Header.module.scss'
 
 export const Header: React.FC = () => {
+  const [authVisible, setAuthVisible] = React.useState(false)
+
+  const openAuthForm = () => {
+    setAuthVisible(true)
+  }
+
+  const closeAuthForm = () => {
+    setAuthVisible(false)
+  }
+
   return (
     <Paper classes={{ root: styles.root }} elevation={0}>
       <div className="d-flex align-center">
@@ -38,23 +49,22 @@ export const Header: React.FC = () => {
         </Link>
       </div>
       <div className="d-flex align-center">
-        <IconButton>
+        <IconButton onClick={openAuthForm}>
           <MessageIcon />
         </IconButton>
         <IconButton>
           <NotificationIcon />
         </IconButton>
-        <Link
-          passHref
-          href='/profile/1'>
+        <Link passHref href="/profile/1">
           <Avatar
             className={styles.avatar}
             alt="Remy Sharp"
             src="https://leonardo.osnova.io/5ffeac9a-a0e5-5be6-98af-659bfaabd2a6/-/scale_crop/108x108/-/format/webp/"
           />
         </Link>
-        <ArrowBottom />
+        <ArrowBottom cursor="pointer" />
       </div>
+      <AuthForm onClose={closeAuthForm} visible={authVisible} />
     </Paper>
   )
 }
